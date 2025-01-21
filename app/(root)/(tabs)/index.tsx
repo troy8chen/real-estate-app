@@ -14,7 +14,7 @@ import icons from "@/constants/icons";
 import images from "@/constants/images";
 
 import Search from "@/components/Search";
-//import Filters from "@/components/Filters";
+import Filters from "@/components/Filters";
 //import NoResults from "@/components/NoResults";
 import { Card, FeatureCards } from "@/components/Cards";
 
@@ -63,6 +63,8 @@ export default function Index() {
               <Text className="text-base font-rubik-bold text-primary-300">See All</Text>
             </TouchableOpacity>
           </View>
+
+          <Filters />
 
           <View className="flex flex-row gap-5 mt-5">
             <Card />
