@@ -14,13 +14,13 @@ import icons from "@/constants/icons";
 import images from "@/constants/images";
 
 import Search from "@/components/Search";
-import Filters from "@/components/Filters";
-import NoResults from "@/components/NoResults";
-import { Card, FeaturedCard } from "@/components/Cards";
+//import Filters from "@/components/Filters";
+//import NoResults from "@/components/NoResults";
+import { Card, FeatureCards } from "@/components/Cards";
 
 import { useAppwrite } from "@/lib/useAppwrite";
 import { useGlobalContext } from "@/lib/global-provider";
-import { getLatestProperties, getProperties } from "@/lib/appwrite";
+//import { getLatestProperties, getProperties } from "@/lib/appwrite";
 
 
 export default function Index() {
@@ -49,8 +49,28 @@ export default function Index() {
               <Text className="text-base font-rubik-bold text-primary-300">See All</Text>
             </TouchableOpacity>
           </View>
-        </View>
+
+          <View className="flex flex-row gap-5 mt-5">
+            <FeatureCards />
+            <FeatureCards />
+            <FeatureCards />
+          </View>
+          </View>
+
+          <View className="flex flex-row items-center justify-between">
+            <Text className="text-xl font-rubik-bold text-black-300">Our Recommendation</Text>
+            <TouchableOpacity>
+              <Text className="text-base font-rubik-bold text-primary-300">See All</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View className="flex flex-row gap-5 mt-5">
+            <Card />
+            <Card />
+          </View>
+        
       </View>
+      
     </SafeAreaView>
   );
 }
