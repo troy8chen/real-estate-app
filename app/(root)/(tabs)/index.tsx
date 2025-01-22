@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
 } from "react-native";
 import { useEffect } from "react";
 import { router, useLocalSearchParams } from "expo-router";
@@ -15,17 +16,19 @@ import icons from "@/constants/icons";
 import Search from "@/components/Search";
 import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
-import { Card, FeatureCards, FeaturedCard } from "@/components/Cards";
+import { Card, FeatureCards, } from "@/components/Cards";
 
 import { useAppwrite } from "@/lib/useAppwrite";
 import { useGlobalContext } from "@/lib/global-provider";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
+// import seed from "@/lib/seed";
 
 
 export default function Index() {
   const { user } = useGlobalContext();
   return (
     <SafeAreaView className="bg-white h-full">
+      {/* <Button title="seed" onPress={seed}/> */}
       <FlatList 
           data= {[1,2, 3, 4]}
           renderItem={({item}) => <Card />}
@@ -58,7 +61,7 @@ export default function Index() {
                   <Text className="text-base font-rubik-bold text-primary-300">See All</Text>
                 </TouchableOpacity>
               </View>
-              <FlatList data={[1,2,3]}
+              <FlatList data={[5,6,7]}
                         renderItem={({item}) => <FeatureCards />}
                         keyExtractor={(item) => item.toString()}
                         horizontal
